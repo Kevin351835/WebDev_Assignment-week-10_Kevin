@@ -26,5 +26,18 @@
         </div>
     </section>
 
+    <section class="container-narrow">
+       <h2 class="page-title mb-8 pb-2">Mata Kuliah <span class="gradient-text">Saya</span></h2>
+
+        <div class="post-list">
+            @foreach ($posts as $post)
+                <article class="post">
+                    <h3 class="post-heading">{{ $post->name }}</h3>
+                    <p class="post-text">{{ $post->day }}</p>
+                </article>
+            @endforeach
+        </div>
+    </section>
+
 </div>
 @endsection

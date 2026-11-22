@@ -53,6 +53,22 @@
             </article>
 
         </div>
+
+        <header class="page-header">
+            <h2 class="page-title">Jadwal <span class="gradient-text">Mata Kuliah</span></h2>
+        </header>
+
+        <div class="post-list">
+            @foreach ($posts as $post)
+                <article class="post">
+                    <div class="post-head">
+                        <span class="post-number">{{ $loop->iteration }}</span>
+                        <h2 class="post-heading">{{ $post->name }}</h2>
+                    </div>
+                    <p class="post-text">Hari: {{ $post->day }}</p>
+                </article>
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection

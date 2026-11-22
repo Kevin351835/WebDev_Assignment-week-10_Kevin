@@ -55,6 +55,23 @@
             </div>
         </div>
 
+        <div class="info-card p-8">
+            <div class="border-b border-slate-800 pb-4 mb-6">
+                <h2 class="info-title text-xl font-bold">Mata Kuliah</h2>
+            </div>
+
+            <div class="space-y-4 text-sm md:text-base">
+                @foreach ($posts as $post)
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                        <div>
+                            <span class="font-semibold text-slate-200">{{ $post->name }}</span>
+                        </div>
+                        <span class="rounded-full bg-blue-500/10 px-3 py-1 font-semibold text-blue-400 text-xs">{{ $post->day }}</span>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection
